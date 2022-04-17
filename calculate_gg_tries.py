@@ -42,9 +42,10 @@ def calculate_gg_tries(gate_size, ratios, gate_part_count_which_already_have=0, 
             if j == 0:
                 if show_charts:
                     plt.plot(range(i), gate_part_counts)
-        result = np.array(results_arr).mean()
-        print("Multiplier:", use_multiplier_when, "/ Avg GG Energy:", result)
-        all_results.append(result)
+        result = np.array(results_arr)
+        print("Multiplier:", use_multiplier_when, "/ Avg GG Energy:", result.mean(), "/ Min GG Energy:", result.min(),
+              "/ Max GG Energy:", result.max())
+        all_results.append(result.mean())
     if show_charts:
         plt.legend(["x2", "x3", "x4", "x5", "x6"])
         plt.xlabel("Part Counts")
