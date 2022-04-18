@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 gate_size = 111  # Galaxy gate part count
 gate_part_count_which_already_have = 0  # Galaxy gate parts you already have
 
+tries = 100  # This is how many gate is opened to calculate average
 show_charts = True
 
 # Probability Ratios
@@ -32,11 +33,11 @@ ratios = {
 random.seed(42)
 
 print("When ship nano body is not full")
-result1 = calculate_gg_tries(gate_size, ratios, gate_part_count_which_already_have, show_charts)
+result1 = calculate_gg_tries(gate_size, ratios, gate_part_count_which_already_have, show_charts, tries=tries)
 print("==========================================")
 ratios["gate_part"] /= 1 - ratios["nano"]
 print("When ship nano body is full")
-result2 = calculate_gg_tries(gate_size, ratios, gate_part_count_which_already_have, show_charts)
+result2 = calculate_gg_tries(gate_size, ratios, gate_part_count_which_already_have, show_charts, tries=tries)
 if show_charts:
     width = 0.40  # the width of the bars
     labels = ["x2", "x3", "x4", "x5", "x6"]

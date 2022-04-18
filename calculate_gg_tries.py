@@ -5,14 +5,14 @@ import numpy
 import numpy as np
 
 
-def calculate_gg_tries(gate_size, ratios, gate_part_count_which_already_have=0, show_charts=False):
+def calculate_gg_tries(gate_size, ratios, gate_part_count_which_already_have=0, show_charts=False, tries=100):
     all_results = []
     for x in range(2, 7):
         use_multiplier_when = x
 
         results_arr = []
         gate_part_counts_matrix = []
-        for j in range(100):
+        for j in range(tries):
             gate_part_counts = []
             gate_parts = np.zeros(gate_size)
             gate_parts[:gate_part_count_which_already_have] = 1
@@ -54,11 +54,11 @@ def calculate_gg_tries(gate_size, ratios, gate_part_count_which_already_have=0, 
                 summ = 0
                 c = 0
                 t = []
-                for j in range(100):
+                for j in range(tries):
                     if len(gate_part_counts_matrix[j]) > i:
                         summ += gate_part_counts_matrix[j][i]
                         c += 1
-                gate_parts_count_avg.append(summ/c)
+                gate_parts_count_avg.append(summ / c)
             plt.plot(range(1, max_tries + 1), gate_parts_count_avg)
     if show_charts:
         plt.legend(["x2", "x3", "x4", "x5", "x6"])
