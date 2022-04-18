@@ -40,5 +40,7 @@ Multiplier: 5 / Avg GG Energy: 2599.38 / Min GG Energy: 1755 / Max GG Energy: 32
 Multiplier: 6 / Avg GG Energy: 2873.3 / Min GG Energy: 1969 / Max GG Energy: 4102
 ```
 ![Multiplier and GG Energy](Multiplier_and_GG_Energy(Zeta).png)
+### Without full nano body
 ![Part Counts Every GG GEnergy Spends](Part_Counts_Every_GG_Energy_Spends(Zeta).png)
+### With full nano body
 ![Multiplier and GG Energy With Full Nano](Multiplier_and_GG_Energy_With_Full_Nano(Zeta).png)

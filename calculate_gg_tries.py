@@ -1,6 +1,7 @@
 import random
 
 import matplotlib.pyplot as plt
+import numpy
 import numpy as np
 
 
@@ -10,6 +11,7 @@ def calculate_gg_tries(gate_size, ratios, gate_part_count_which_already_have=0, 
         use_multiplier_when = x
 
         results_arr = []
+        gate_part_counts_matrix = []
         for j in range(100):
             gate_part_counts = []
             gate_parts = np.zeros(gate_size)
@@ -39,17 +41,29 @@ def calculate_gg_tries(gate_size, ratios, gate_part_count_which_already_have=0, 
                 gate_part_counts.append(gate_parts.sum())
                 i += 1
             results_arr.append(i)
-            if j == 0:
-                if show_charts:
-                    plt.plot(range(i), gate_part_counts)
+            gate_part_counts_matrix.append(gate_part_counts)
+
         result = np.array(results_arr)
         print("Multiplier:", use_multiplier_when, "/ Avg GG Energy:", result.mean(), "/ Min GG Energy:", result.min(),
               "/ Max GG Energy:", result.max())
         all_results.append(result.mean())
+        if show_charts:
+            max_tries = max(map(len, gate_part_counts_matrix))
+            gate_parts_count_avg = []
+            for i in range(max_tries):
+                summ = 0
+                c = 0
+                t = []
+                for j in range(100):
+                    if len(gate_part_counts_matrix[j]) > i:
+                        summ += gate_part_counts_matrix[j][i]
+                        c += 1
+                gate_parts_count_avg.append(summ/c)
+            plt.plot(range(1, max_tries + 1), gate_parts_count_avg)
     if show_charts:
         plt.legend(["x2", "x3", "x4", "x5", "x6"])
-        plt.xlabel("Part Counts")
-        plt.ylabel("GG Energy")
+        plt.ylabel("Part Counts")
+        plt.xlabel("GG Energy")
         plt.title("Part Counts Every GG Energy Spends")
         plt.show()
     return all_results
