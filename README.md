@@ -26,18 +26,18 @@ python3 main.py
 ## Sum Statistics About Zeta Gate
 ```text
 When ship nano body is not full
-Multiplier: 2 / Avg GG Energy: 2082.85 / Min GG Energy: 1590 / Max GG Energy: 2697
-Multiplier: 3 / Avg GG Energy: 2508.7 / Min GG Energy: 1569 / Max GG Energy: 3177
-Multiplier: 4 / Avg GG Energy: 2714.37 / Min GG Energy: 1847 / Max GG Energy: 3437
-Multiplier: 5 / Avg GG Energy: 2871.39 / Min GG Energy: 2036 / Max GG Energy: 4050
-Multiplier: 6 / Avg GG Energy: 3050.22 / Min GG Energy: 2126 / Max GG Energy: 4879
+Multiplier: 2 / Avg GG Energy: 1678.75 / Min GG Energy: 1309 / Max GG Energy: 2202
+Multiplier: 3 / Avg GG Energy: 1800.61 / Min GG Energy: 1315 / Max GG Energy: 2534
+Multiplier: 4 / Avg GG Energy: 1878.79 / Min GG Energy: 1296 / Max GG Energy: 2640
+Multiplier: 5 / Avg GG Energy: 1902.16 / Min GG Energy: 1303 / Max GG Energy: 3211
+Multiplier: 6 / Avg GG Energy: 1906.75 / Min GG Energy: 1167 / Max GG Energy: 3248
 ==========================================
 When ship nano body is full
-Multiplier: 2 / Avg GG Energy: 1872.14 / Min GG Energy: 1205 / Max GG Energy: 2379
-Multiplier: 3 / Avg GG Energy: 2254.34 / Min GG Energy: 1601 / Max GG Energy: 2908
-Multiplier: 4 / Avg GG Energy: 2464.25 / Min GG Energy: 1675 / Max GG Energy: 3557
-Multiplier: 5 / Avg GG Energy: 2599.38 / Min GG Energy: 1755 / Max GG Energy: 3284
-Multiplier: 6 / Avg GG Energy: 2873.3 / Min GG Energy: 1969 / Max GG Energy: 4102
+Multiplier: 2 / Avg GG Energy: 1508.86 / Min GG Energy: 1026 / Max GG Energy: 2055
+Multiplier: 3 / Avg GG Energy: 1659.44 / Min GG Energy: 1259 / Max GG Energy: 2434
+Multiplier: 4 / Avg GG Energy: 1695.73 / Min GG Energy: 1051 / Max GG Energy: 2623
+Multiplier: 5 / Avg GG Energy: 1696.8 / Min GG Energy: 1087 / Max GG Energy: 2820
+Multiplier: 6 / Avg GG Energy: 1786.32 / Min GG Energy: 1084 / Max GG Energy: 2940
 ```
 ![Multiplier and GG Energy](Multiplier_and_GG_Energy(Zeta).png)
 ### Without full nano body
