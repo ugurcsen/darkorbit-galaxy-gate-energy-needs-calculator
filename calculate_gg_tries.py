@@ -23,17 +23,18 @@ def calculate_gg_tries(gate_size, ratios, gate_part_count_which_already_have=0, 
                 is_gate_part = (r < 100 * ratios["gate_part"])
                 if is_gate_part:
                     if multiplier == use_multiplier_when:
-                        while True:
+                        multiplier += 1
+                        while multiplier > 1 and not all(gate_parts == 1):
                             gate_part_number = random.randrange(0, gate_size)
                             if gate_parts[gate_part_number] == 0:
-                                break
+                                gate_parts[gate_part_number] = 1
+                                multiplier -= 1
                     else:
                         gate_part_number = random.randrange(0, gate_size)
-
-                    if gate_parts[gate_part_number] == 0:
-                        gate_parts[gate_part_number] = 1
-                    else:
-                        multiplier += 1
+                        if gate_parts[gate_part_number] == 0:
+                            gate_parts[gate_part_number] = 1
+                        else:
+                            multiplier += 1
 
                 elif multiplier == use_multiplier_when:
                     multiplier = 1
